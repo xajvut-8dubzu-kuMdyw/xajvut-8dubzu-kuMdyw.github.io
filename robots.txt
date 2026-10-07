@@ -1,0 +1,7 @@
+User-agent: Yandex
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://xajvut-8dubzu-kumdyw.github.io/sitemap.xml

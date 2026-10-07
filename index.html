@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Муж на час — услуги мастера по дому | Ремонт, сборка, электрика, сантехника</title>
+<meta name="description" content="Профессиональные услуги «Муж на час» в Новосибирске: мелкий ремонт, сборка мебели, электрика, сантехника, монтаж. Приезжаю быстро, фиксированные цены.">
+<link rel="canonical" href="https://xajvut-8dubzu-kumdyw.github.io/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Муж на час в Новосибирске — услуги мастера по дому">
+<meta property="og:description" content="Мелкий ремонт, сборка мебели, электрика, сантехника в Новосибирске. Приезжаю быстро, цены фиксированные.">
+<meta property="og:url" content="https://xajvut-8dubzu-kumdyw.github.io/">
+<meta property="og:image" content="https://xajvut-8dubzu-kumdyw.github.io/images/hero-tools.jpg">
+<meta property="og:locale" content="ru_RU">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Муж на час",
+  "description": "Услуги мастера по дому в Новосибирске: мелкий ремонт, сборка мебели, электрика, сантехника.",
+  "areaServed": "Новосибирск",
+  "telephone": "+79537655919",
+  "priceRange": "от 300 ₽",
+  "url": "https://xajvut-8dubzu-kumdyw.github.io/",
+  "image": "https://xajvut-8dubzu-kumdyw.github.io/images/hero-tools.jpg"
+}
+</script>
+<style>
+  :root{
+    --bg:#0f1420;
+    --surface:#171e2e;
+    --card:#1c2436;
+    --border:#2a3348;
+    --text:#eaf0f8;
+    --muted:#9aa7bd;
+    --accent:#ffb020;
+    --accent-2:#ff7a59;
+    --green:#34d399;
+    --radius:20px;
+    --shadow:0 20px 50px rgba(0,0,0,.35);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Manrope',system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky;top:0;z-index:100;
+    backdrop-filter:blur(14px);
+    background:rgba(15,20,32,.8);
+    border-bottom:1px solid var(--border);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;}
+  .logo{
+    display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px;
+  }
+  .logo .badge{
+    width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    color:#1a1300;font-size:22px;
+  }
+  .nav-links{display:flex;align-items:center;gap:30px;font-weight:600;}
+  .nav-links a{color:var(--muted);transition:.2s;}
+  .nav-links a:hover{color:var(--text);}
+  .nav-cta{
+    background:var(--accent);color:#1a1300;font-weight:700;
+    padding:12px 22px;border-radius:12px;transition:.2s;
+  }
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(255,176,32,.3);}
+  .burger{display:none;background:none;border:none;cursor:pointer;}
+  .burger span{display:block;width:26px;height:3px;background:var(--text);margin:5px 0;border-radius:3px;}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;padding:90px 0 100px;}
+  .hero::before{
+    content:'';position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(600px 400px at 85% 15%, rgba(255,122,89,.18), transparent 60%),
+      radial-gradient(700px 500px at 10% 80%, rgba(255,176,32,.15), transparent 60%);
+  }
+  .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;}
+  .chip{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(52,211,153,.12);color:var(--green);
+    border:1px solid rgba(52,211,153,.3);
+    padding:8px 16px;border-radius:999px;font-weight:600;font-size:14px;margin-bottom:24px;
+  }
+  h1{font-size:52px;line-height:1.08;font-weight:800;letter-spacing:-1px;margin-bottom:20px;}
+  h1 .grad{
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p.lead{color:var(--muted);font-size:18px;max-width:540px;margin-bottom:32px;}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:36px;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    padding:16px 30px;border-radius:14px;font-weight:700;font-size:16px;transition:.2s;border:none;cursor:pointer;
+  }
+  .btn-primary{background:var(--accent);color:#1a1300;}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,176,32,.35);}
+  .btn-ghost{background:transparent;color:var(--text);border:2px solid var(--border);}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+  .btn-wa{background:#25d366;color:#062b16;}
+  .btn-wa:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(37,211,102,.35);}
+  .btn-tg{background:#229ed9;color:#06223a;}
+  .btn-tg:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(34,158,217,.35);}
+  .social-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;}
+  .social-row .btn{flex:0 0 auto;padding:14px 22px;font-size:15px;}
+  .hero-stats{display:flex;gap:40px;flex-wrap:wrap;}
+  .stat h3{font-size:28px;font-weight:800;color:var(--accent);}
+  .stat p{color:var(--muted);font-size:14px;}
+  .hero-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border);}
+  .hero-img img{width:100%;height:460px;object-fit:cover;}
+
+  /* ---------- SECTION HEAD ---------- */
+  .section{padding:90px 0;}
+  .section-head{text-align:center;max-width:680px;margin:0 auto 56px;}
+  .section-head .kicker{color:var(--accent);font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:13px;margin-bottom:12px;}
+  .section-head h2{font-size:38px;font-weight:800;letter-spacing:-.5px;margin-bottom:14px;}
+  .section-head p{color:var(--muted);font-size:17px;}
+
+  /* ---------- SERVICES ---------- */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .service{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:30px;transition:.25s;position:relative;overflow:hidden;
+  }
+  .service:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:var(--shadow);}
+  .service .icon{
+    width:56px;height:56px;border-radius:14px;display:grid;place-items:center;
+    background:linear-gradient(135deg,rgba(255,176,32,.2),rgba(255,122,89,.2));
+    font-size:26px;margin-bottom:20px;
+  }
+  .service h3{font-size:20px;font-weight:700;margin-bottom:10px;}
+  .service p{color:var(--muted);font-size:14px;margin-bottom:18px;}
+  .service .price-row{display:flex;align-items:baseline;justify-content:space-between;border-top:1px dashed var(--border);padding-top:16px;}
+  .service .price{font-size:22px;font-weight:800;color:var(--accent);}
+  .service .price small{font-size:13px;font-weight:600;color:var(--muted);}
+
+  /* ---------- WHY ---------- */
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .why-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:30px;text-align:center;}
+  .why-card .num{
+    width:56px;height:56px;margin:0 auto 18px;border-radius:50%;
+    display:grid;place-items:center;font-size:22px;font-weight:800;
+    background:rgba(255,176,32,.12);color:var(--accent);border:2px solid rgba(255,176,32,.3);
+  }
+  .why-card h3{font-size:17px;font-weight:700;margin-bottom:8px;}
+  .why-card p{color:var(--muted);font-size:14px;}
+
+  /* ---------- PRICE TABLE ---------- */
+  .price-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+  .price-table{width:100%;border-collapse:collapse;font-size:16px;}
+  .price-table thead th{
+    background:var(--card);text-align:left;padding:18px 26px;
+    font-size:14px;text-transform:uppercase;letter-spacing:.5px;color:var(--accent);
+  }
+  .price-table td{padding:18px 26px;border-top:1px solid var(--border);}
+  .price-table .name{font-weight:600;}
+  .price-table .desc{color:var(--muted);font-size:14px;}
+  .price-table .cost{text-align:right;font-weight:800;color:var(--accent);white-space:nowrap;}
+  .price-table tr:hover td{background:rgba(255,176,32,.04);}
+  .price-note{color:var(--muted);font-size:14px;margin-top:20px;text-align:center;}
+
+  /* ---------- GALLERY ---------- */
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .gallery-item{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);position:relative;aspect-ratio:4/3;}
+  .gallery-item img{width:100%;height:100%;object-fit:cover;transition:.4s;}
+  .gallery-item:hover img{transform:scale(1.06);}
+  .gallery-item .cap{
+    position:absolute;bottom:0;left:0;right:0;padding:40px 20px 16px;
+    background:linear-gradient(transparent,rgba(10,14,22,.85));color:#fff;font-weight:600;font-size:15px;
+  }
+
+  /* ---------- STEPS ---------- */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:step;}
+  .step{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:30px;position:relative;}
+  .step::before{
+    counter-increment:step;content:"0" counter(step);
+    position:absolute;top:18px;right:22px;font-size:40px;font-weight:800;
+    color:rgba(255,176,32,.15);
+  }
+  .step h3{font-size:17px;font-weight:700;margin-bottom:8px;padding-right:50px;}
+  .step p{color:var(--muted);font-size:14px;}
+
+  /* ---------- CTA ---------- */
+  .cta{
+    background:linear-gradient(135deg,rgba(255,176,32,.12),rgba(255,122,89,.12));
+    border:1px solid rgba(255,176,32,.3);border-radius:var(--radius);
+    padding:60px 40px;text-align:center;margin-bottom:-40px;position:relative;z-index:5;
+  }
+  .cta h2{font-size:34px;font-weight:800;margin-bottom:14px;}
+  .cta p{color:var(--muted);font-size:17px;max-width:520px;margin:0 auto 30px;}
+  .cta .btn{font-size:18px;padding:18px 40px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#0b0f18;border-top:1px solid var(--border);padding:120px 0 40px;margin-top:80px;}
+  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px;}
+  .footer-grid h4{font-size:15px;font-weight:700;margin-bottom:16px;}
+  .footer-grid ul{list-style:none;}
+  .footer-grid li{margin-bottom:10px;}
+  .footer-grid a,.footer-grid span{color:var(--muted);font-size:14px;}
+  .footer-grid a:hover{color:var(--accent);}
+  .footer-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;}
+
+  /* ---------- MOBILE ---------- */
+  @media(max-width:992px){
+    .services-grid,.gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .why-grid,.steps{grid-template-columns:repeat(2,1fr);}
+    .hero-inner{grid-template-columns:1fr;gap:40px;}
+    .hero-img{order:-1;}
+    .hero-img img{height:320px;}
+    h1{font-size:38px;}
+  }
+  @media(max-width:640px){
+    .nav-links{position:fixed;top:72px;right:-100%;flex-direction:column;background:#141b2a;width:75%;height:100vh;padding:40px 30px;gap:24px;transition:.3s;border-left:1px solid var(--border);}
+    .nav-links.open{right:0;}
+    .burger{display:block;}
+    .services-grid,.gallery-grid,.why-grid,.steps{grid-template-columns:1fr;}
+    .section{padding:60px 0;}
+    .section-head h2{font-size:30px;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    .cta h2{font-size:26px;}
+    .price-table thead{display:none;}
+    .price-table,.price-table tbody,.price-table tr,.price-table td{display:block;}
+    .price-table tr{background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:14px;padding:18px;}
+    .price-table td{border:none;padding:6px 0;}
+    .price-table .cost{text-align:left;font-size:20px;padding-top:10px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">
+      <span class="badge">🔧</span> Муж&nbsp;на&nbsp;час
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Услуги</a>
+      <a href="#prices">Цены</a>
+      <a href="#gallery">Работы</a>
+      <a href="#steps">Как я работаю</a>
+      <a href="tel:+79537655919" class="nav-cta">Позвонить</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <span class="chip">🛠️ Профи-мастер по дому · работаю сегодня</span>
+      <h1>Домашний мастер <span class="grad">муж на час</span> в Новосибирске</h1>
+      <p class="lead">Мелкий ремонт, сборка мебели, электрика, сантехника и другие бытовые дела. Приеду быстро и сделаю качественно — с гарантией.</p>
+      <div class="hero-actions">
+        <a href="tel:+79537655919" class="btn btn-primary">📞 Заказать мастера</a>
+        <a href="#prices" class="btn btn-ghost">Смотреть цены</a>
+      </div>
+      <div class="social-row">
+        <a href="https://wa.me/79537655919" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp</a>
+        <a href="https://t.me/+79537655919" target="_blank" rel="noopener" class="btn btn-tg">Telegram</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><h3>Новосибирск</h3><p>работаю по городу</p></div>
+        <div class="stat"><h3>3000+</h3><p>выполненных задач</p></div>
+        <div class="stat"><h3>4.9 ★</h3><p>рейтинг от клиентов</p></div>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="images/hero-tools.jpg" alt="Набор профессиональных инструментов">
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Мои услуги</div>
+      <h2>Что я делаю</h2>
+      <p>Один звонок — и весь список ваших домашних задач решён. От мелкого ремонта до сложного монтажа.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service">
+        <div class="icon">🛠️</div>
+        <h3>Мелкий ремонт</h3>
+        <p>Починка дверей, мебели, крепёж полок и картин, устранение скрипов и поломок по дому.</p>
+        <div class="price-row"><span class="price">от 900 ₽<small>/час</small></span></div>
+      </div>
+      <div class="service">
+        <div class="icon">🔌</div>
+        <h3>Электрика</h3>
+        <p>Установка розеток, выключателей, светильников, замена проводки и мелкий ремонт.</p>
+        <div class="price-row"><span class="price">от 1100 ₽<small>/час</small></span></div>
+      </div>
+      <div class="service">
+        <div class="icon">🚿</div>
+        <h3>Сантехника</h3>
+        <p>Устранение протечек, установка смесителей и кранов, замена сифонов и прокладок.</p>
+        <div class="price-row"><span class="price">от 1200 ₽<small>/час</small></span></div>
+      </div>
+      <div class="service">
+        <div class="icon">📦</div>
+        <h3>Сборка мебели</h3>
+        <p>Сборка и установка корпусной мебели: шкафы, кухни, комоды, стеллажи, кровати.</p>
+        <div class="price-row"><span class="price">от 1000 ₽<small>/час</small></span></div>
+      </div>
+      <div class="service">
+        <div class="icon">🎨</div>
+        <h3>Покраска и отделка</h3>
+        <p>Покраска стен и элементов, шпаклёвка, косметический ремонт отдельных участков.</p>
+        <div class="price-row"><span class="price">от 950 ₽<small>/час</small></span></div>
+      </div>
+      <div class="service">
+        <div class="icon">🪟</div>
+        <h3>Монтаж и установка</h3>
+        <p>Вешаю телевизоры, полки, карнизы, зеркала, люстры и бра.</p>
+        <div class="price-row"><span class="price">от 900 ₽<small>/час</small></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="num">01</div>
+        <h3>Приезд в день звонка</h3>
+        <p>Приезжаю в удобное вам время в Новосибирске, в том числе вечером и в выходные.</p>
+      </div>
+      <div class="why-card">
+        <div class="num">02</div>
+        <h3>Прозрачные цены</h3>
+        <p>Фиксированный прайс. Озвучиваю стоимость до начала работ — без сюрпризов.</p>
+      </div>
+      <div class="why-card">
+        <div class="num">03</div>
+        <h3>Гарантия работы</h3>
+        <p>Даю гарантию на все выполненные работы и использую исправный инструмент.</p>
+      </div>
+      <div class="why-card">
+        <div class="num">04</div>
+        <h3>Аккуратно и чисто</h3>
+        <p>Убираю за собой рабочее место и не оставляю мусор после завершения.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="prices" style="background:rgba(255,176,32,.03);">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Прайс-лист</div>
+      <h2>Цены на услуги</h2>
+      <p>Честные и понятные цены. Итоговая стоимость зависит от объёма работ и материалов.</p>
+    </div>
+    <div class="price-wrap">
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Услуга</th>
+            <th>Описание</th>
+            <th style="text-align:right;">Цена</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="name">Сборка мебели</td><td class="desc">шкаф, комод, стеллаж, стол, кровать</td><td class="cost">от 1 000 ₽ / час</td></tr>
+          <tr><td class="name">Сборка кухни</td><td class="desc">корпуса, фасады, фурнитура, навеска</td><td class="cost">от 1 500 ₽ / час</td></tr>
+          <tr><td class="name">Установка розетки</td><td class="desc">подключение и монтаж, до 1 точки</td><td class="cost">от 350 ₽</td></tr>
+          <tr><td class="name">Установка люстры</td><td class="desc">сборка и подключение светильника</td><td class="cost">от 600 ₽</td></tr>
+          <tr><td class="name">Установка смесителя</td><td class="desc">монтаж крана на кухню или в ванну</td><td class="cost">от 700 ₽</td></tr>
+          <tr><td class="name">Устранение протечки</td><td class="desc">диагностика и устранение течи</td><td class="cost">от 900 ₽</td></tr>
+          <tr><td class="name">Крепёж телевизора</td><td class="desc">навеска на кронштейн и на стену</td><td class="cost">от 600 ₽</td></tr>
+          <tr><td class="name">Навеска полки / зеркала</td><td class="desc">разметка, сверление, крепёж</td><td class="cost">от 300 ₽</td></tr>
+          <tr><td class="name">Пойти за водой, сходить в магазин</td><td class="desc">привезу забытое из магазина</td><td class="cost">от 300 ₽</td></tr>
+          <tr><td class="name">Повесить шторы / карниз</td><td class="desc">монтаж карниза, кронштейны</td><td class="cost">от 450 ₽</td></tr>
+          <tr><td class="name">Поклейка обоев / покраска</td><td class="desc">косметическая отделка участка</td><td class="cost">от 900 ₽</td></tr>
+          <tr><td class="name">Оставшаяся мелочь</td><td class="desc">закрыть щель, скрип, подкрутить, заменить</td><td class="cost">от 900 ₽ / час</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="price-note">Точную стоимость рассчитаю по телефону после описания задачи. Выезд и диагностика — бесплатно.</p>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Мои работы</div>
+      <h2>Фото выполненных задач</h2>
+      <p>Несколько примеров того, что я делаю своими руками — быстро и аккуратно.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/drill-repair.jpg" alt="Электродрель и инструменты">
+        <div class="cap">Ремонт и крепёж</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/furniture-assembly.jpg" alt="Собранный шкаф в интерьере">
+        <div class="cap">Сборка мебели</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/plumbing-repair.jpg" alt="Установка смесителя под раковиной">
+        <div class="cap">Сантехнические работы</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/electrical-work.jpg" alt="Инструменты электрика">
+        <div class="cap">Электрика и розетки</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/painting-wall.jpg" alt="Покраска стены валиком">
+        <div class="cap">Покраска и отделка</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/hero-tools.jpg" alt="Набор инструментов на верстаке">
+        <div class="cap">Весь инструмент с собой</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="steps" style="padding-top:0;">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Как я работаю</div>
+      <h2>4 простых шага</h2>
+      <p>От вашего первого звонка до готового результата — минимально вашего времени.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Позвоните мне</h3>
+        <p>Опишите задачу и удобное время. Проконсультирую и назову примерную цену.</p>
+      </div>
+      <div class="step">
+        <h3>Приезд мастера</h3>
+        <p>Приеду в назначенный день и час со всем необходимым инструментом.</p>
+      </div>
+      <div class="step">
+        <h3>Выполнение работ</h3>
+        <p>Аккуратно и быстро решаю задачу, убираю за собой рабочее место.</p>
+      </div>
+      <div class="step">
+        <h3>Оплата результата</h3>
+        <p>Платёж после завершения по согласованной цене. Гарантия на работу.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="cta">
+    <h2>Нужен мастер сегодня?</h2>
+    <p>Позвоните — приеду в удобное время, сделаю качественно и по фиксированной цене.</p>
+    <a href="tel:+79537655919" class="btn btn-primary">📞 +7 (953) 765-59-19</a>
+    <div class="social-row" style="justify-content:center;margin-top:18px;">
+      <a href="https://wa.me/79537655919" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp</a>
+      <a href="https://t.me/+79537655919" target="_blank" rel="noopener" class="btn btn-tg">Telegram</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#" class="logo" style="margin-bottom:16px;">
+          <span class="badge">🔧</span> Муж&nbsp;на&nbsp;час
+        </a>
+        <p style="color:var(--muted);font-size:14px;max-width:280px;margin-top:14px;">Профессиональная помощь по дому в Новосибирске. Быстро, честно, с гарантией. Работаю по городу.</p>
+      </div>
+      <div>
+        <h4>Услуги</h4>
+        <ul>
+          <li><a href="#services">Мелкий ремонт</a></li>
+          <li><a href="#services">Электрика</a></li>
+          <li><a href="#services">Сантехника</a></li>
+          <li><a href="#services">Сборка мебели</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="#prices">Цены</a></li>
+          <li><a href="#gallery">Работы</a></li>
+          <li><a href="#steps">Как я работаю</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+79537655919">+7 (953) 765-59-19</a></li>
+          <li><span>Ежедневно · 8:00–21:00</span></li>
+          <li><a href="https://wa.me/79537655919" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://t.me/+79537655919" target="_blank" rel="noopener">Telegram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Муж на час · Новосибирск. Все права защищены.</span>
+      <span>Работаю по городу и пригороду</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const burger=document.getElementById('burger');
+  const navLinks=document.getElementById('navLinks');
+  burger.addEventListener('click',e=>{
+    e.stopPropagation();
+    navLinks.classList.toggle('open');
+  });
+  document.addEventListener('click',e=>{
+    if(!navLinks.contains(e.target)&&!burger.contains(e.target)){
+      navLinks.classList.remove('open');
+    }
+  });
+</script>
+</body>
+</html>
