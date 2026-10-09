@@ -185,6 +185,7 @@
   .price-table .name{font-weight:600;}
   .price-table .desc{color:var(--muted);font-size:14px;}
   .price-table .cost{text-align:right;font-weight:800;color:var(--accent);white-space:nowrap;}
+  .price-table .group{background:rgba(255,176,32,.08);color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.5px;font-size:13px;padding:12px 26px;border-top:2px solid var(--border);}
   .price-table tr:hover td{background:rgba(255,176,32,.04);}
   .price-note{color:var(--muted);font-size:14px;margin-top:20px;text-align:center;}
 
@@ -253,6 +254,10 @@
     .price-table tr{background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:14px;padding:18px;}
     .price-table td{border:none;padding:6px 0;}
     .price-table .cost{text-align:left;font-size:20px;padding-top:10px;}
+    .price-table .group{
+      display:block;background:rgba(255,176,32,.1);border:none;border-radius:10px;
+      margin:8px 0 4px;padding:12px 16px;font-size:14px;
+    }
   }
 </style>
 </head>
@@ -394,18 +399,54 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td class="name">Сборка мебели</td><td class="desc">шкаф, комод, стеллаж, стол, кровать</td><td class="cost">от 1 000 ₽ / час</td></tr>
-          <tr><td class="name">Сборка кухни</td><td class="desc">корпуса, фасады, фурнитура, навеска</td><td class="cost">от 1 500 ₽ / час</td></tr>
-          <tr><td class="name">Установка розетки</td><td class="desc">подключение и монтаж, до 1 точки</td><td class="cost">от 350 ₽</td></tr>
-          <tr><td class="name">Установка люстры</td><td class="desc">сборка и подключение светильника</td><td class="cost">от 600 ₽</td></tr>
-          <tr><td class="name">Установка смесителя</td><td class="desc">монтаж крана на кухню или в ванну</td><td class="cost">от 700 ₽</td></tr>
-          <tr><td class="name">Устранение протечки</td><td class="desc">диагностика и устранение течи</td><td class="cost">от 900 ₽</td></tr>
-          <tr><td class="name">Крепёж телевизора</td><td class="desc">навеска на кронштейн и на стену</td><td class="cost">от 600 ₽</td></tr>
-          <tr><td class="name">Навеска полки / зеркала</td><td class="desc">разметка, сверление, крепёж</td><td class="cost">от 300 ₽</td></tr>
-          <tr><td class="name">Пойти за водой, сходить в магазин</td><td class="desc">привезу забытое из магазина</td><td class="cost">от 300 ₽</td></tr>
-          <tr><td class="name">Повесить шторы / карниз</td><td class="desc">монтаж карниза, кронштейны</td><td class="cost">от 450 ₽</td></tr>
-          <tr><td class="name">Поклейка обоев / покраска</td><td class="desc">косметическая отделка участка</td><td class="cost">от 900 ₽</td></tr>
-          <tr><td class="name">Оставшаяся мелочь</td><td class="desc">закрыть щель, скрип, подкрутить, заменить</td><td class="cost">от 900 ₽ / час</td></tr>
+          <tr><th colspan="3" class="group">Сборка мебели</th></tr>
+          <tr><td class="name">Сборка шкафов</td><td class="desc">шкаф-купе, распашной, встроенный</td><td class="cost">5 000 ₽</td></tr>
+          <tr><td class="name">Сборка комодов</td><td class="desc">сборка и установка комода</td><td class="cost">500 ₽</td></tr>
+          <tr><td class="name">Сборка кроватей</td><td class="desc">каркас, основание, изголовье</td><td class="cost">3 600 ₽</td></tr>
+          <tr><td class="name">Сборка мебели для ванной</td><td class="desc">тумба, зеркало, шкафчик</td><td class="cost">3 000 ₽</td></tr>
+          <tr><td class="name">Сборка столов</td><td class="desc">обеденный, письменный, журнальный</td><td class="cost">1 500 ₽</td></tr>
+          <tr><td class="name">Сборка тумб</td><td class="desc">ТВ-тумба, прикроватная</td><td class="cost">1 500 ₽</td></tr>
+          <tr><td class="name">Сборка офисной мебели</td><td class="desc">столы, шкафы, стеллажи для офиса</td><td class="cost">2 000 ₽</td></tr>
+          <tr><td class="name">Сборка стеллажей</td><td class="desc">открытые и закрытые полки</td><td class="cost">1 000 ₽</td></tr>
+          <tr><td class="name">Сборка гардеробной</td><td class="desc">система хранения, полки, штанги</td><td class="cost">3 000 ₽</td></tr>
+          <tr><th colspan="3" class="group">Разборка</th></tr>
+          <tr><td class="name">Разборка кухонных гарнитуров</td><td class="desc">демонтаж и разборка</td><td class="cost">2 000 ₽</td></tr>
+          <tr><td class="name">Разборка диванов</td><td class="desc">разборка и подготовка к выносу</td><td class="cost">2 800 ₽</td></tr>
+          <tr><td class="name">Разборка столов</td><td class="desc">демонтаж и разборка</td><td class="cost">от 700 ₽</td></tr>
+          <tr><th colspan="3" class="group">Навеска и монтаж</th></tr>
+          <tr><td class="name">Установка карнизов</td><td class="desc">за погонный метр</td><td class="cost">от 400 ₽/м</td></tr>
+          <tr><td class="name">Установка жалюзи</td><td class="desc">монтаж на окно или стену</td><td class="cost">800 ₽</td></tr>
+          <tr><td class="name">Навес штор</td><td class="desc">навес штор и тюля</td><td class="cost">500 ₽</td></tr>
+          <tr><td class="name">Навеска зеркал</td><td class="desc">за единицу</td><td class="cost">от 1 000 ₽</td></tr>
+          <tr><td class="name">Установка кронштейнов</td><td class="desc">кронштейн ТВ, полки — за единицу</td><td class="cost">1 500 ₽</td></tr>
+          <tr><td class="name">Навес полок</td><td class="desc">навеска и крепление полок</td><td class="cost">от 700 ₽</td></tr>
+          <tr><td class="name">Навеска картин и декора</td><td class="desc">разметка и крепёж</td><td class="cost">1 050 ₽</td></tr>
+          <tr><td class="name">Установка турников</td><td class="desc">настенный или в проём — за единицу</td><td class="cost">3 500 ₽</td></tr>
+          <tr><td class="name">Монтаж сушилок для белья</td><td class="desc">настенная или потолочная</td><td class="cost">2 000 ₽</td></tr>
+          <tr><td class="name">Сверление отверстий</td><td class="desc">под крепёж, монтаж</td><td class="cost">1 500 ₽</td></tr>
+          <tr><th colspan="3" class="group">Сантехника</th></tr>
+          <tr><td class="name">Установка и замена смесителей</td><td class="desc">кухня, ванная</td><td class="cost">от 600 ₽</td></tr>
+          <tr><td class="name">Монтаж гибкой подводки</td><td class="desc">подключение к сантехнике</td><td class="cost">от 800 ₽</td></tr>
+          <tr><td class="name">Демонтаж гибкой подводки</td><td class="desc">снятие старой подводки</td><td class="cost">от 300 ₽</td></tr>
+          <tr><td class="name">Герметизация ванн</td><td class="desc">обработка швов герметиком</td><td class="cost">2 000 ₽</td></tr>
+          <tr><th colspan="3" class="group">Электрика</th></tr>
+          <tr><td class="name">Установка розеток и выключателей</td><td class="desc">монтаж и подключение</td><td class="cost">от 700 ₽</td></tr>
+          <tr><td class="name">Установка бра</td><td class="desc">настенный светильник</td><td class="cost">от 800 ₽</td></tr>
+          <tr><td class="name">Установка люстры</td><td class="desc">сборка и подключение</td><td class="cost">от 5 000 ₽</td></tr>
+          <tr><td class="name">Установка звонков</td><td class="desc">проводной или беспроводной</td><td class="cost">800 ₽</td></tr>
+          <tr><td class="name">Перенос розеток</td><td class="desc">перенос точки питания</td><td class="cost">2 000 ₽</td></tr>
+          <tr><td class="name">Замена ламп</td><td class="desc">замена лампочки/светильника</td><td class="cost">1 000 ₽</td></tr>
+          <tr><td class="name">Замена розеток и выключателей</td><td class="desc">демонтаж старой и установка новой</td><td class="cost">400 ₽</td></tr>
+          <tr><td class="name">Штрабление</td><td class="desc">за погонный метр</td><td class="cost">500 ₽/м</td></tr>
+          <tr><th colspan="3" class="group">Подключение техники</th></tr>
+          <tr><td class="name">Подключение стиральной машины</td><td class="desc">подключение к коммуникациям</td><td class="cost">3 500 ₽</td></tr>
+          <tr><td class="name">Подключение посудомоечной машины</td><td class="desc">подключение к воде и канализации</td><td class="cost">5 000 ₽</td></tr>
+          <tr><td class="name">Подключение духового шкафа</td><td class="desc">электрическое подключение</td><td class="cost">2 000 ₽</td></tr>
+          <tr><td class="name">Подключение вытяжки</td><td class="desc">монтаж и подключение</td><td class="cost">4 000 ₽</td></tr>
+          <tr><td class="name">Подключение варочной панели</td><td class="desc">электрическое подключение</td><td class="cost">3 500 ₽</td></tr>
+          <tr><th colspan="3" class="group">Отделка</th></tr>
+          <tr><td class="name">Частичная замена кафеля, керамогранита</td><td class="desc">ремонт и замена плитки</td><td class="cost">10 000 ₽</td></tr>
+          <tr><td class="name">Покраска межплиточных швов</td><td class="desc">обновление швов плитки</td><td class="cost">10 000 ₽</td></tr>
         </tbody>
       </table>
     </div>
