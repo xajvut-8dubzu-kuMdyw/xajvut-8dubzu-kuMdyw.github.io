@@ -188,18 +188,18 @@
   .price-note{color:var(--muted);font-size:14px;margin-top:20px;text-align:center;}
 
   .acc{display:none;}
-  .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px;}
+  .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px;}
   .cat-tile{
-    background:var(--card);border:2px solid var(--border);border-radius:16px;
-    padding:22px 18px;display:flex;flex-direction:column;align-items:flex-start;gap:6px;
+    background:var(--card);border:2px solid var(--border);border-radius:12px;
+    padding:14px 12px;display:flex;flex-direction:column;align-items:flex-start;gap:4px;
     cursor:pointer;text-align:left;color:var(--text);font-family:inherit;transition:.2s;
     position:relative;overflow:hidden;
   }
-  .cat-tile:hover{border-color:var(--accent);transform:translateY(-3px);}
+  .cat-tile:hover{border-color:var(--accent);transform:translateY(-2px);}
   .cat-tile.active{border-color:var(--accent);background:linear-gradient(135deg,rgba(255,176,32,.15),rgba(255,122,89,.1));}
-  .cat-tile .cat-icon{font-size:26px;}
-  .cat-tile .cat-name{font-size:16px;font-weight:700;}
-  .cat-tile .cat-count{font-size:13px;color:var(--muted);}
+  .cat-tile .cat-icon{font-size:20px;}
+  .cat-tile .cat-name{font-size:13px;font-weight:700;}
+  .cat-tile .cat-count{font-size:11px;color:var(--muted);}
   .cat-panel{display:none;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
   .cat-panel.active{display:block;animation:fadeIn .3s ease;}
   @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
@@ -268,8 +268,8 @@
     .price-table tr{background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:12px;padding:16px;}
     .price-table td{border:none;padding:6px 0;}
     .price-table .cost{text-align:left;font-size:18px;padding-top:8px;}
-    .cat-grid{grid-template-columns:repeat(2,1fr);gap:12px;}
-    .cat-tile{padding:18px 16px;}
+    .cat-grid{grid-template-columns:repeat(2,1fr);gap:10px;}
+    .cat-tile{padding:13px 12px;}
   }
 </style>
 </head>
