@@ -177,17 +177,28 @@
   /* ---------- PRICE TABLE ---------- */
   .price-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
   .price-table{width:100%;border-collapse:collapse;font-size:16px;}
-  .price-table thead th{
-    background:var(--card);text-align:left;padding:18px 26px;
-    font-size:14px;text-transform:uppercase;letter-spacing:.5px;color:var(--accent);
-  }
-  .price-table td{padding:18px 26px;border-top:1px solid var(--border);}
+  .price-table{width:100%;border-collapse:collapse;}
+  .price-table td{padding:16px 22px;border-top:1px solid var(--border);}
   .price-table .name{font-weight:600;}
   .price-table .desc{color:var(--muted);font-size:14px;}
   .price-table .cost{text-align:right;font-weight:800;color:var(--accent);white-space:nowrap;}
-  .price-table .group{background:rgba(255,176,32,.08);color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.5px;font-size:13px;padding:12px 26px;border-top:2px solid var(--border);}
   .price-table tr:hover td{background:rgba(255,176,32,.04);}
   .price-note{color:var(--muted);font-size:14px;margin-top:20px;text-align:center;}
+
+  .acc{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+  .acc-item{border-top:1px solid var(--border);}
+  .acc-item:first-child{border-top:none;}
+  .acc-head{
+    width:100%;display:flex;align-items:center;justify-content:space-between;
+    background:var(--card);border:none;cursor:pointer;
+    padding:20px 26px;font-family:inherit;font-size:17px;font-weight:700;color:var(--text);
+    transition:.2s;
+  }
+  .acc-head:hover{background:var(--surface);}
+  .acc-head .acc-arrow{color:var(--accent);font-size:18px;transition:.25s;}
+  .acc-item.open .acc-head .acc-arrow{transform:rotate(180deg);}
+  .acc-body{max-height:0;overflow:hidden;transition:max-height .35s ease;background:var(--surface);}
+  .acc-item.open .acc-body{max-height:2000px;}
 
   /* ---------- GALLERY ---------- */
   .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
@@ -249,15 +260,12 @@
     .section-head h2{font-size:30px;}
     .footer-grid{grid-template-columns:1fr 1fr;}
     .cta h2{font-size:26px;}
-    .price-table thead{display:none;}
     .price-table,.price-table tbody,.price-table tr,.price-table td{display:block;}
-    .price-table tr{background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:14px;padding:18px;}
+    .price-table tr{background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:12px;padding:16px;}
     .price-table td{border:none;padding:6px 0;}
-    .price-table .cost{text-align:left;font-size:20px;padding-top:10px;}
-    .price-table .group{
-      display:block;background:rgba(255,176,32,.1);border:none;border-radius:10px;
-      margin:8px 0 4px;padding:12px 16px;font-size:14px;
-    }
+    .price-table .cost{text-align:left;font-size:18px;padding-top:8px;}
+    .acc-head{padding:16px 20px;font-size:16px;}
+    .acc-body table{margin:0;}
   }
 </style>
 </head>
@@ -390,65 +398,106 @@
       <p>Честные и понятные цены. Итоговая стоимость зависит от объёма работ и материалов.</p>
     </div>
     <div class="price-wrap">
-      <table class="price-table">
-        <thead>
-          <tr>
-            <th>Услуга</th>
-            <th>Описание</th>
-            <th style="text-align:right;">Цена</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><th colspan="3" class="group">Сборка мебели</th></tr>
-          <tr><td class="name">Сборка шкафов</td><td class="desc">шкаф-купе, распашной, встроенный</td><td class="cost">3 000 ₽</td></tr>
-          <tr><td class="name">Сборка комодов</td><td class="desc">сборка и установка комода</td><td class="cost">1 300 ₽</td></tr>
-          <tr><td class="name">Сборка кроватей</td><td class="desc">каркас, основание, изголовье</td><td class="cost">1 600 ₽</td></tr>
-          <tr><td class="name">Сборка мебели для ванной</td><td class="desc">тумба, зеркало, шкафчик</td><td class="cost">2 000 ₽</td></tr>
-          <tr><td class="name">Сборка столов</td><td class="desc">обеденный, письменный, журнальный</td><td class="cost">1 200 ₽</td></tr>
-          <tr><td class="name">Сборка тумб</td><td class="desc">ТВ-тумба, прикроватная</td><td class="cost">1 200 ₽</td></tr>
-          <tr><td class="name">Сборка офисной мебели</td><td class="desc">столы, шкафы, стеллажи для офиса</td><td class="cost">1 400 ₽</td></tr>
-          <tr><td class="name">Сборка стеллажей</td><td class="desc">открытые и закрытые полки</td><td class="cost">1 000 ₽</td></tr>
-          <tr><td class="name">Сборка гардеробной</td><td class="desc">система хранения, полки, штанги</td><td class="cost">1 800 ₽</td></tr>
-          <tr><th colspan="3" class="group">Разборка</th></tr>
-          <tr><td class="name">Разборка кухонных гарнитуров</td><td class="desc">демонтаж и разборка</td><td class="cost">2 000 ₽</td></tr>
-          <tr><td class="name">Разборка диванов</td><td class="desc">разборка и подготовка к выносу</td><td class="cost">900 ₽</td></tr>
-          <tr><td class="name">Разборка столов</td><td class="desc">демонтаж и разборка</td><td class="cost">от 600 ₽</td></tr>
-          <tr><th colspan="3" class="group">Навеска и монтаж</th></tr>
-          <tr><td class="name">Установка карнизов</td><td class="desc">за погонный метр</td><td class="cost">от 1 000 ₽/м</td></tr>
-          <tr><td class="name">Установка жалюзи</td><td class="desc">монтаж на окно или стену</td><td class="cost">800 ₽</td></tr>
-          <tr><td class="name">Навес штор</td><td class="desc">навес штор и тюля</td><td class="cost">500 ₽</td></tr>
-          <tr><td class="name">Навеска зеркал</td><td class="desc">за единицу</td><td class="cost">1 000 ₽</td></tr>
-          <tr><td class="name">Установка кронштейнов</td><td class="desc">кронштейн ТВ, полки — за единицу</td><td class="cost">1 400 ₽</td></tr>
-          <tr><td class="name">Навес полок</td><td class="desc">навеска и крепление полок</td><td class="cost">500 ₽</td></tr>
-          <tr><td class="name">Навеска картин и декора</td><td class="desc">разметка и крепёж</td><td class="cost">400 ₽</td></tr>
-          <tr><td class="name">Установка турников</td><td class="desc">настенный или в проём — за единицу</td><td class="cost">2 500 ₽</td></tr>
-          <tr><td class="name">Монтаж сушилок для белья</td><td class="desc">настенная или потолочная</td><td class="cost">1 800 ₽</td></tr>
-          <tr><td class="name">Сверление отверстий</td><td class="desc">под крепёж, монтаж</td><td class="cost">1 200 ₽</td></tr>
-          <tr><th colspan="3" class="group">Сантехника</th></tr>
-          <tr><td class="name">Установка и замена смесителей</td><td class="desc">кухня, ванная</td><td class="cost">800 ₽</td></tr>
-          <tr><td class="name">Монтаж гибкой подводки</td><td class="desc">подключение к сантехнике</td><td class="cost">от 700 ₽</td></tr>
-          <tr><td class="name">Демонтаж гибкой подводки</td><td class="desc">снятие старой подводки</td><td class="cost">от 300 ₽</td></tr>
-          <tr><td class="name">Герметизация ванн</td><td class="desc">обработка швов герметиком</td><td class="cost">900 ₽</td></tr>
-          <tr><th colspan="3" class="group">Электрика</th></tr>
-          <tr><td class="name">Установка розеток и выключателей</td><td class="desc">монтаж и подключение</td><td class="cost">500 ₽</td></tr>
-          <tr><td class="name">Установка бра</td><td class="desc">настенный светильник</td><td class="cost">600 ₽</td></tr>
-          <tr><td class="name">Установка люстры</td><td class="desc">сборка и подключение</td><td class="cost">от 1 300 ₽</td></tr>
-          <tr><td class="name">Установка звонков</td><td class="desc">проводной или беспроводной</td><td class="cost">700 ₽</td></tr>
-          <tr><td class="name">Перенос розеток</td><td class="desc">перенос точки питания</td><td class="cost">1 400 ₽</td></tr>
-          <tr><td class="name">Замена ламп</td><td class="desc">замена лампочки/светильника</td><td class="cost">500 ₽</td></tr>
-          <tr><td class="name">Замена розеток и выключателей</td><td class="desc">демонтаж старой и установка новой</td><td class="cost">400 ₽</td></tr>
-          <tr><td class="name">Штрабление</td><td class="desc">за погонный метр</td><td class="cost">500 ₽/м</td></tr>
-          <tr><th colspan="3" class="group">Подключение техники</th></tr>
-          <tr><td class="name">Подключение стиральной машины</td><td class="desc">подключение к коммуникациям</td><td class="cost">1 800 ₽</td></tr>
-          <tr><td class="name">Подключение посудомоечной машины</td><td class="desc">подключение к воде и канализации</td><td class="cost">2 000 ₽</td></tr>
-          <tr><td class="name">Подключение духового шкафа</td><td class="desc">электрическое подключение</td><td class="cost">1 400 ₽</td></tr>
-          <tr><td class="name">Подключение вытяжки</td><td class="desc">монтаж и подключение</td><td class="cost">1 700 ₽</td></tr>
-          <tr><td class="name">Подключение варочной панели</td><td class="desc">электрическое подключение</td><td class="cost">1 600 ₽</td></tr>
-          <tr><th colspan="3" class="group">Отделка</th></tr>
-          <tr><td class="name">Частичная замена кафеля, керамогранита</td><td class="desc">ремонт и замена плитки</td><td class="cost">от 2 000 ₽/м²</td></tr>
-          <tr><td class="name">Покраска межплиточных швов</td><td class="desc">обновление швов плитки</td><td class="cost">от 400 ₽/м²</td></tr>
-        </tbody>
-      </table>
+      <div class="acc" id="priceAcc">
+
+        <div class="acc-item">
+          <button class="acc-head" type="button"><span>Сборка мебели</span><span class="acc-arrow">▾</span></button>
+          <div class="acc-body">
+            <table class="price-table">
+              <tr><td class="name">Сборка шкафов</td><td class="desc">шкаф-купе, распашной, встроенный</td><td class="cost">3 000 ₽</td></tr>
+              <tr><td class="name">Сборка комодов</td><td class="desc">сборка и установка комода</td><td class="cost">1 300 ₽</td></tr>
+              <tr><td class="name">Сборка кроватей</td><td class="desc">каркас, основание, изголовье</td><td class="cost">1 600 ₽</td></tr>
+              <tr><td class="name">Сборка мебели для ванной</td><td class="desc">тумба, зеркало, шкафчик</td><td class="cost">2 000 ₽</td></tr>
+              <tr><td class="name">Сборка столов</td><td class="desc">обеденный, письменный, журнальный</td><td class="cost">1 200 ₽</td></tr>
+              <tr><td class="name">Сборка тумб</td><td class="desc">ТВ-тумба, прикроватная</td><td class="cost">1 200 ₽</td></tr>
+              <tr><td class="name">Сборка офисной мебели</td><td class="desc">столы, шкафы, стеллажи для офиса</td><td class="cost">1 400 ₽</td></tr>
+              <tr><td class="name">Сборка стеллажей</td><td class="desc">открытые и закрытые полки</td><td class="cost">1 000 ₽</td></tr>
+              <tr><td class="name">Сборка гардеробной</td><td class="desc">система хранения, полки, штанги</td><td class="cost">1 800 ₽</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" type="button"><span>Разборка</span><span class="acc-arrow">▾</span></button>
+          <div class="acc-body">
+            <table class="price-table">
+              <tr><td class="name">Разборка кухонных гарнитуров</td><td class="desc">демонтаж и разборка</td><td class="cost">2 000 ₽</td></tr>
+              <tr><td class="name">Разборка диванов</td><td class="desc">разборка и подготовка к выносу</td><td class="cost">900 ₽</td></tr>
+              <tr><td class="name">Разборка столов</td><td class="desc">демонтаж и разборка</td><td class="cost">от 600 ₽</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" type="button"><span>Навеска и монтаж</span><span class="acc-arrow">▾</span></button>
+          <div class="acc-body">
+            <table class="price-table">
+              <tr><td class="name">Установка карнизов</td><td class="desc">за погонный метр</td><td class="cost">от 1 000 ₽/м</td></tr>
+              <tr><td class="name">Установка жалюзи</td><td class="desc">монтаж на окно или стену</td><td class="cost">800 ₽</td></tr>
+              <tr><td class="name">Навес штор</td><td class="desc">навес штор и тюля</td><td class="cost">500 ₽</td></tr>
+              <tr><td class="name">Навеска зеркал</td><td class="desc">за единицу</td><td class="cost">1 000 ₽</td></tr>
+              <tr><td class="name">Установка кронштейнов</td><td class="desc">кронштейн ТВ, полки — за единицу</td><td class="cost">1 400 ₽</td></tr>
+              <tr><td class="name">Навес полок</td><td class="desc">навеска и крепление полок</td><td class="cost">500 ₽</td></tr>
+              <tr><td class="name">Навеска картин и декора</td><td class="desc">разметка и крепёж</td><td class="cost">400 ₽</td></tr>
+              <tr><td class="name">Установка турников</td><td class="desc">настенный или в проём — за единицу</td><td class="cost">2 500 ₽</td></tr>
+              <tr><td class="name">Монтаж сушилок для белья</td><td class="desc">настенная или потолочная</td><td class="cost">1 800 ₽</td></tr>
+              <tr><td class="name">Сверление отверстий</td><td class="desc">под крепёж, монтаж</td><td class="cost">1 200 ₽</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" type="button"><span>Сантехника</span><span class="acc-arrow">▾</span></button>
+          <div class="acc-body">
+            <table class="price-table">
+              <tr><td class="name">Установка и замена смесителей</td><td class="desc">кухня, ванная</td><td class="cost">800 ₽</td></tr>
+              <tr><td class="name">Монтаж гибкой подводки</td><td class="desc">подключение к сантехнике</td><td class="cost">от 700 ₽</td></tr>
+              <tr><td class="name">Демонтаж гибкой подводки</td><td class="desc">снятие старой подводки</td><td class="cost">от 300 ₽</td></tr>
+              <tr><td class="name">Герметизация ванн</td><td class="desc">обработка швов герметиком</td><td class="cost">900 ₽</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" type="button"><span>Электрика</span><span class="acc-arrow">▾</span></button>
+          <div class="acc-body">
+            <table class="price-table">
+              <tr><td class="name">Установка розеток и выключателей</td><td class="desc">монтаж и подключение</td><td class="cost">500 ₽</td></tr>
+              <tr><td class="name">Установка бра</td><td class="desc">настенный светильник</td><td class="cost">600 ₽</td></tr>
+              <tr><td class="name">Установка люстры</td><td class="desc">сборка и подключение</td><td class="cost">от 1 300 ₽</td></tr>
+              <tr><td class="name">Установка звонков</td><td class="desc">проводной или беспроводной</td><td class="cost">700 ₽</td></tr>
+              <tr><td class="name">Перенос розеток</td><td class="desc">перенос точки питания</td><td class="cost">1 400 ₽</td></tr>
+              <tr><td class="name">Замена ламп</td><td class="desc">замена лампочки/светильника</td><td class="cost">500 ₽</td></tr>
+              <tr><td class="name">Замена розеток и выключателей</td><td class="desc">демонтаж старой и установка новой</td><td class="cost">400 ₽</td></tr>
+              <tr><td class="name">Штрабление</td><td class="desc">за погонный метр</td><td class="cost">500 ₽/м</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" type="button"><span>Подключение техники</span><span class="acc-arrow">▾</span></button>
+          <div class="acc-body">
+            <table class="price-table">
+              <tr><td class="name">Подключение стиральной машины</td><td class="desc">подключение к коммуникациям</td><td class="cost">1 800 ₽</td></tr>
+              <tr><td class="name">Подключение посудомоечной машины</td><td class="desc">подключение к воде и канализации</td><td class="cost">2 000 ₽</td></tr>
+              <tr><td class="name">Подключение духового шкафа</td><td class="desc">электрическое подключение</td><td class="cost">1 400 ₽</td></tr>
+              <tr><td class="name">Подключение вытяжки</td><td class="desc">монтаж и подключение</td><td class="cost">1 700 ₽</td></tr>
+              <tr><td class="name">Подключение варочной панели</td><td class="desc">электрическое подключение</td><td class="cost">1 600 ₽</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" type="button"><span>Отделка</span><span class="acc-arrow">▾</span></button>
+          <div class="acc-body">
+            <table class="price-table">
+              <tr><td class="name">Частичная замена кафеля, керамогранита</td><td class="desc">ремонт и замена плитки</td><td class="cost">от 2 000 ₽/м²</td></tr>
+              <tr><td class="name">Покраска межплиточных швов</td><td class="desc">обновление швов плитки</td><td class="cost">от 400 ₽/м²</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
     </div>
     <p class="price-note">Точную стоимость рассчитаю по телефону после описания задачи. Выезд и диагностика — бесплатно.</p>
   </div>
@@ -585,6 +634,20 @@
       navLinks.classList.remove('open');
     }
   });
+
+  const acc=document.getElementById('priceAcc');
+  if(acc){
+    const items=acc.querySelectorAll('.acc-item');
+    items[0].classList.add('open');
+    items.forEach(item=>{
+      const head=item.querySelector('.acc-head');
+      head.addEventListener('click',()=>{
+        const isOpen=item.classList.contains('open');
+        items.forEach(i=>i.classList.remove('open'));
+        if(!isOpen)item.classList.add('open');
+      });
+    });
+  }
 </script>
 </body>
 </html>
