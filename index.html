@@ -15,7 +15,7 @@
 <meta property="og:locale" content="ru_RU">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -99,6 +99,19 @@
     padding:8px 16px;border-radius:999px;font-weight:600;font-size:14px;margin-bottom:24px;
   }
   h1{font-size:52px;line-height:1.08;font-weight:800;letter-spacing:-1px;margin-bottom:20px;}
+  h1.callig{
+    font-family:'Caveat',cursive;
+    font-weight:700;
+    font-size:64px;
+    line-height:1.15;
+    letter-spacing:.5px;
+    color:#f6e9d2;
+    text-shadow:0 2px 0 rgba(0,0,0,.3),0 0 30px rgba(255,176,32,.25);
+  }
+  h1.callig .grad{
+    font-family:'Caveat',cursive;
+    font-style:italic;
+  }
   h1 .grad{
     background:linear-gradient(90deg,var(--accent),var(--accent-2));
     -webkit-background-clip:text;background-clip:text;color:transparent;
@@ -224,6 +237,7 @@
     .hero-img{order:-1;}
     .hero-img img{height:320px;}
     h1{font-size:38px;}
+    h1.callig{font-size:48px;}
   }
   @media(max-width:640px){
     .nav-links{position:fixed;top:72px;right:-100%;flex-direction:column;background:#141b2a;width:75%;height:100vh;padding:40px 30px;gap:24px;transition:.3s;border-left:1px solid var(--border);}
@@ -266,7 +280,7 @@
   <div class="container hero-inner">
     <div class="hero-text">
       <span class="chip">🛠️ Профи-мастер по дому · работаю сегодня</span>
-      <h1>Домашний мастер <span class="grad">муж на час</span> в Новосибирске</h1>
+      <h1 class="callig">Домашний мастер <span class="grad">муж на час</span> в Новосибирске</h1>
       <p class="lead"><strong>Работаю аккуратно, с гарантией — без переделок.</strong> Мелкий ремонт, сборка мебели, электрика, сантехника и другие бытовые дела. Приеду быстро и сделаю качественно.</p>
       <div class="hero-actions">
         <a href="tel:+79537655919" class="btn btn-primary">📞 Заказать мастера</a>
